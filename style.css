@@ -1,0 +1,65 @@
+:root {
+    --cell-border-style: 5px solid black
+}
+
+h1 {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    height: 600px;
+    width: 600px;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
+    background: grey;
+}
+
+.cell {
+    font-size: 164px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.top-left {
+    border-bottom: 5px solid black;
+    border-right: 5px solid black;    
+}
+
+.top-center {
+    border-bottom: var(--cell-border-style);
+    border-right: var(--cell-border-style); 
+}
+
+.top-right {
+    border-bottom: var(--cell-border-style);
+}
+
+.center-left {
+    border-bottom: var(--cell-border-style);
+    border-right: var(--cell-border-style);  
+}
+
+.center-center {
+    border-bottom: var(--cell-border-style);
+    border-right: var(--cell-border-style); 
+}
+
+.center-right {
+    border-bottom: var(--cell-border-style);
+}
+
+.bottom-left {
+    border-right: var(--cell-border-style);
+}
+
+.bottom-center {
+    border-right: var(--cell-border-style);
+}
