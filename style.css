@@ -1,9 +1,33 @@
 :root {
-    --cell-border-style: 5px solid black
+    --cell-border-style: 5px solid black;
+    --form-bg-color: #bdb8b8;
+    --main-bg-color: #FFFFFF;
+    --button-hover-color: #7bf77b;
+
+    background: var(--main-bg-color);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: grey;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 1;
 }
 
 h1 {
     text-align: center;
+    margin-top: 24px;
+    font-size: 3rem;
 }
 
 main {
@@ -13,19 +37,28 @@ main {
 }
 
 section {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     height: 600px;
     width: 600px;
     background-size: cover;
     display: grid;
     grid-template-columns: repeat(3, 200px);
     grid-template-rows: repeat(3, 200px);
-    background: grey;
 }
 
 .cell {
     font-size: 164px;
     text-align: center;
     cursor: pointer;
+}
+
+.disabled-cell {
+    pointer-events: none;
 }
 
 .top-left {
@@ -62,4 +95,90 @@ section {
 
 .bottom-center {
     border-right: var(--cell-border-style);
+}
+
+form {
+    width: min-content;
+    height: min-content;
+    position: absolute; 
+    padding: 12px 24px 12px 24px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    background: var(--form-bg-color);
+    box-shadow: 2px 2px 4px;
+
+}
+
+form > p {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0;
+}
+
+fieldset {
+    padding: 0;
+    margin: 0;
+    border-style: none;
+}
+
+fieldset label {
+    margin-left: 4px;
+}
+
+#x {
+    position: relative;
+    left: 2px;
+}
+
+#playerTwo {
+    position: relative;
+    left: 30px;
+}
+button {
+    padding: 8px 24px 8px 24px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    border-style: solid;
+    box-shadow: 1px 1px 2px grey;
+    font-weight: 700;
+    background: var(--main-bg-color);
+}
+
+button:hover {
+    background: var(--button-hover-color);
+    border: 2px solid black;
+}
+/*label[for='player1-name'] {
+    visibility: hidden;
+}*/
+
+.winner-popup {
+    width: 30%;
+    height: 30%;
+    position: absolute; 
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--form-bg-color);
+}
+
+.winner-popup > div {
+    display: flex;
+    gap: 24px;
 }
