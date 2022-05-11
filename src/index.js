@@ -1,3 +1,5 @@
+import './style.css'
+
 const ticTacToe = (function() {
 
     let playerOne, playerTwo, computer, headingName
