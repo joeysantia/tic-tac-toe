@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js" defer></script>
+    <title>Tic Tac Toe</title>
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <h1>Tic Tac Toe</h1>
+    <main>
+        <section class="container">
+            <div class="cell top-left"></div>
+            <div class="cell top-center"></div>
+            <div class="cell top-right"></div>
+            <div class="cell center-left"></div>
+            <div class="cell center-center"></div>
+            <div class="cell center-right"></div>
+            <div class="cell bottom-left"></div>
+            <div class="cell bottom-center"></div>
+            <div class="cell bottom-right"></div>
+        </section>
+    </main>
+    <form>
+        <label for="playerOne-name"> Enter your name: </label>
+        <input type="text" name="playerOne-name" id="playerOne-name" placeholder="Your name" required>
+        <div class="fields">
+            <fieldset>
+                <legend>Choose your symbol</legend>
+                    <p>
+                        <label for="symbol-choice">X</label>
+                        <input id="x" type="radio" name="symbol-choice" value="X" required></p>
+                    <p>
+                        <label for="computer">O</label>
+                        <input id='o' type="radio" name="symbol-choice" value="O" required>
+                    </p>
+            </fieldset>
+            <fieldset>
+                <legend>Choose your foe</legend>
+                    <p>
+                        <label for="foe-choice">Player</label>
+                        <input id="playerTwo" type="radio" name="foe-choice" value="playerTwo" required></p>
+                    <p>
+                        <label for="computer">Computer</label>
+                        <input id='computer' type="radio" name="foe-choice" value="computer" required>
+                    </p>
+            </fieldset>
+        </div>
+        <button>Let's Play</button>
+    </form>
+</body>
+
+</html>
