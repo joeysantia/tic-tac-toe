@@ -1,6 +1,8 @@
 
 This is a tic-tac-toe game that allows for two players and a simple CPU opponent. Currently working on incorporating the minimax algorithm for a more advanced computer. This project was a JavaScript exercise, so it has minimal CSS
 
+Live site: https://joeysantia.github.io/tic-tac-toe/
+
 NOTE: due to Git errors, the original version of this project was lost. The original first draft was uploaded on March 22nd.
 
 FURTHER CHANGES
